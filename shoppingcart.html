@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        /* Add your CSS styles here for cart display */
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div id="cart">
+        <!-- Your cart items will be dynamically added here -->
+    </div>
+    
+    <h2>Products</h2>
+    <div class="product">
+        <span>Product 1</span>
+        <button class="add-to-cart" data-name="Product 1" data-price="10.00">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <span>Product 2</span>
+        <button class="add-to-cart" data-name="Product 2" data-price="15.00">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <span>Product 3</span>
+        <button class="add-to-cart" data-name="Product 3" data-price="20.00">Add to Cart</button>
+    </div>
+
+    <script>
+        const cart = document.getElementById("cart");
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        addToCartButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const name = button.getAttribute("data-name");
+                const price = parseFloat(button.getAttribute("data-price"));
+                addToCart(name, price);
+            });
+        });
+
+        function addToCart(name, price) {
+            const item = document.createElement("div");
+            item.innerHTML = `<strong>${name}</strong> - $${price.toFixed(2)}`;
+            cart.appendChild(item);
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        /* Add your CSS styles here for cart display */
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div id="cart">
+        <!-- Your cart items will be dynamically added here -->
+    </div>
+    
+    <h2>Products</h2>
+    <div class="product">
+        <span>Product 1</span>
+        <button class="add-to-cart" data-name="Product 1" data-price="10.00">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <span>Product 2</span>
+        <button class="add-to-cart" data-name="Product 2" data-price="15.00">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <span>Product 3</span>
+        <button class="add-to-cart" data-name="Product 3" data-price="20.00">Add to Cart</button>
+    </div>
+
+    <script>
+        const cart = document.getElementById("cart");
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        addToCartButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const name = button.getAttribute("data-name");
+                const price = parseFloat(button.getAttribute("data-price"));
+                addToCart(name, price);
+            });
+        });
+
+        function addToCart(name, price) {
+            const item = document.createElement("div");
+            item.innerHTML = `<strong>${name}</strong> - $${price.toFixed(2)}`;
+            cart.appendChild(item);
+        }
+    </script>
+</body>
+</html>
